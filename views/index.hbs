@@ -1,1 +1,58 @@
-<h1>Hello This is index Page.</h1>
+<div class="container m-5">
+  <div class="row m-3">
+    <div class="btn-group mx-auto" role="group">
+      <button id="btnGroupCategory" type="button" class="btn btn-light btn-lg dropdown-toggle" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        類別
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupCategory">
+        <a class="dropdown-item" href="#">家居物業</a>
+        <a class="dropdown-item" href="#">交通出行</a>
+        <a class="dropdown-item" href="#">休閒娛樂</a>
+        <a class="dropdown-item" href="#">餐飲食品</a>
+        <a class="dropdown-item" href="#">其他</a>
+      </div>
+    </div>
+  </div>
+  <div class="row m-3 align-items-center justify-content-center" style="background-color: #e1eef6;">
+    <h5 class=" col-4">總金額:</h5>
+    <h1 class="col-6 p-3" style="color:#ff5f2e">10000</h1>
+  </div>
+  <div class="row m-3">
+    <div class="container">
+      <!-- #each records -->
+      <div class="row align-items-center justify-content-between">
+        <div class="col-1 align-self-center mx-auto">
+          <i class="fas fa-home " style="font-size:30px; color:#fcbe32"></i>
+        </div>
+        <div class="col align-self-center ml-auto">
+          <div class="pt-1">房租</div>
+          <a class="text-muted" style="font-size: smaller;">2020/5/22</a>
+        </div>
+        <div class="col-3 align-self-center text-right">6000</div>
+        <div class="col-3 align-self-center text-center">
+          <a class="m-2" href="./todos/{{ this._id }}">Edit</a>
+          <a class="m-2" href="./todos/{{ this._id }}">Delete</a>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-1 align-self-center mx-auto">
+          <i class="fas fa-grin-beam" style="font-size:30px; color:#fcbe32"></i>
+        </div>
+        <div class="col align-self-center ml-auto">
+          <div class="pt-1">點心</div>
+          <a class="text-muted" style="font-size: smaller;">2020/5/22</a>
+        </div>
+        <div class="col-3 align-self-center text-right">60</div>
+        <div class="col-3 align-self-center text-center">
+          <a class="m-2" href="./todos/{{ this._id }}">Edit</a>
+          <a class="m-2" href="./todos/{{ this._id }}">Delete</a>
+        </div>
+      </div>
+    </div>
+    <!-- /each -->
+  </div>
+  <div class="row mt-5 align-items-center justify-content-center">
+    <button>新增支出</button>
+  </div>
+</div>
