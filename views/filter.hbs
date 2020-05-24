@@ -3,7 +3,7 @@
     <div class="btn-group mx-auto" role="group">
       <button id="btnGroupCategory" type="button" class="btn btn-light btn-lg dropdown-toggle" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
-        類別
+        {{categorySelect}}
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupCategory">
         <a class="dropdown-item" href="/filter/家居物業">家居物業</a>
@@ -31,9 +31,9 @@
         </div>
         <div class="col-3 align-self-center text-right">{{this.amount}}</div>
         <div class="col-3 align-self-center text-center">
-          <button type="button" onclick="location.href='./records/{{ this._id }}/edit'" class="far fa-edit"
+          <button type="button" onclick="location.href='/records/{{ this._id }}/edit'" class="far fa-edit"
             style="border: none; font-size:25px; background: transparent; color:gray;" value=""></button>
-          <form action="./records/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
+          <form action="/records/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
             <button type="submmit" onclick="return deleteCheck()" class="far fa-trash-alt"
               style="border: none; font-size:25px; background: transparent; color:gray;" value=""></button>
           </form>

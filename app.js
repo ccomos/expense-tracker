@@ -77,6 +77,21 @@ app.delete('/records/:id', (req, res) => {
     .catch(error => console.log(error))
 })
 
+app.get('/filter/:category', (req, res) => {
+  const categorySelect = req.params.category
+  console.log(categorySelect)
+  let totalAmount = 0
+  return Record.find({ category: categorySelect })
+    .lean()
+    .then(records => {
+      for (let i = 0; i < records.length; i++) {
+        totalAmount += records[i].amount
+      }
+      res.render('filter', { records, totalAmount, categorySelect })
+    })
+    .catch(error => console.error(error))
+})
+
 app.listen(port, () => {
   console.log(`App is listening on localhost:${port}`)
 })
