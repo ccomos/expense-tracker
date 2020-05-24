@@ -31,8 +31,12 @@
         </div>
         <div class="col-3 align-self-center text-right">{{this.amount}}</div>
         <div class="col-3 align-self-center text-center">
-          <a class="m-2" href="./records/{{ this._id }}">Edit</a>
-          <a class="m-2" href="./records/{{ this._id }}">Delete</a>
+          <button type="button" onclick="location.href='./records/{{ this._id }}/edit'" class="far fa-edit"
+            style="border: none; font-size:25px; background: transparent; color:gray;" value=""></button>
+          <form action="./restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
+            <button type="button" onclick="return deleteCheck()" class="far fa-trash-alt"
+              style="border: none; font-size:25px; background: transparent; color:gray;" value=""></button>
+          </form>
         </div>
       </div>
       {{/each}}
