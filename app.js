@@ -52,7 +52,7 @@ app.get('/records/:id/edit', (req, res) => {
     .catch(error => console.log(error))
 })
 
-app.post('/records/:id', (req, res) => {
+app.put('/records/:id', (req, res) => {
   const id = req.params.id
   const editRecord = req.body
   if (editRecord.category === "家居物業") { editRecord.categoryIcon = 'fas fa-home' }
