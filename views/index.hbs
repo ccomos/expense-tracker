@@ -22,7 +22,7 @@
     <div class="container">
       {{#each records}}
       <div class="row align-items-center justify-content-between">
-        <div class="col-1 align-self-center mx-auto">
+        <div class="col-2 align-self-center text-center">
           <i class="{{this.categoryIcon}}" style="font-size:30px; color:#fcbe32"></i>
         </div>
         <div class="col align-self-center ml-auto">
@@ -39,6 +39,8 @@
     </div>
   </div>
   <div class="row mt-5 align-items-center justify-content-center">
-    <button>新增支出</button>
+    <form action="/creat" method="GET">
+      <button>新增支出</button>
+    </form>
   </div>
 </div>
