@@ -79,7 +79,6 @@ app.delete('/records/:id', (req, res) => {
 
 app.get('/filter/:category', (req, res) => {
   const categorySelect = req.params.category
-  console.log(categorySelect)
   let totalAmount = 0
   return Record.find({ category: categorySelect })
     .lean()

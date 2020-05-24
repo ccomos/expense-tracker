@@ -1,11 +1,12 @@
 <div class="container m-5">
   <div class="row m-3">
     <div class="btn-group mx-auto" role="group">
-      <button id="btnGroupCategory" type="button" class="btn btn-light btn-lg dropdown-toggle" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
+      <button id="btnGroupCategory" type="button" class="btn btn-outline-secondary btn-lg dropdown-toggle"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{categorySelect}}
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupCategory">
+        <a class="dropdown-item" href="/">全部</a>
         <a class="dropdown-item" href="/filter/家居物業">家居物業</a>
         <a class="dropdown-item" href="/filter/交通出行">交通出行</a>
         <a class="dropdown-item" href="/filter/休閒娛樂">休閒娛樂</a>
@@ -14,11 +15,11 @@
       </div>
     </div>
   </div>
-  <div class="row m-3 align-items-center justify-content-center" style="background-color: #e1eef6;">
+  <div class="row m-3 align-items-center justify-content-center" style="background-color: #e1eef6; border-radius:10px;">
     <h5 class=" col-4">總金額:</h5>
     <h1 class="col-6 p-3" style="color:#ff5f2e">{{totalAmount}}</h1>
   </div>
-  <div class="row m-3">
+  <div class="row m-3" style="background-color: #e1eef6; border-radius:10px;">
     <div class="container">
       {{#each records}}
       <div class="row align-items-center justify-content-between">
@@ -44,7 +45,7 @@
   </div>
   <div class="row mt-5 align-items-center justify-content-center">
     <form action="/creat" method="GET">
-      <button>新增支出</button>
+      <button class="btn btn-secondary btn-lg" style="background-color:gray;">新增支出</button>
     </form>
   </div>
 </div>
